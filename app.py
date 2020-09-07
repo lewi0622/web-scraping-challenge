@@ -16,7 +16,8 @@ def home():
     # Retrieve mars data
     mars_data = mongo.db.collection.find_one()
 
-    print(mars_data)
+    mars_data['mars_fact_table'] = mars_data['mars_fact_table'].replace('class="dataframe"', 'class="table table-striped"')
+    mars_data['mars_fact_table'] = mars_data['mars_fact_table'].replace('border="1"', '')
 
     # Return template and data
     return render_template("index.html", mars=mars_data)

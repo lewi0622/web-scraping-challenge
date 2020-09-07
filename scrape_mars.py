@@ -90,5 +90,5 @@ def scrape():
         'paragraph': news_p,
         'jpl_img': jpl_img, 
         'mars_fact_table': planet_profile_html, 
-        'hemispher_image_urls': hemisphere_image_urls
+        'hemisphere_image_urls': hemisphere_image_urls
     }
